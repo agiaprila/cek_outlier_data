@@ -1,0 +1,35 @@
+#import data cara 1
+library(eeadxl)
+ebong_data <- read_excel("C:/Users/LENOVO/Downloads/ebong data.xlsx")
+
+#import data cara 2
+ebong_data <- read.delim("clipboard")
+
+
+View(ebong_data)
+dim (ebong_data)
+colnames(ebong_data)
+summary(ebong_data)
+
+
+#plot data oulier
+boxplot((ebong_data[,2]), main="Usia_produktif")
+plot(ebong_data$Usia_produktif)
+
+
+boxplot((ebong_data[,3]), main="Jumlah_tenaga_medis")
+plot(ebong_data$Jumlah_tenaga_medis)
+
+
+boxplot((ebong_data[,4]), main="presentase_status_gizi")
+plot(ebong_data$presentase_status_gizi)
+
+boxplot((ebong_data[,5]), main="persentase_penduduk_miskin")
+plot(ebong_data$Jumlah_tenaga_medis)
+
+
+boxplot((ebong_data[,6]), main="persentase_pengelolaan_makanan_sehat")
+plot(ebong_data$presentase_status_gizi)
+
+boxplot((ebong_data[,7]), main="jumlah_kasus_TBCt")
+plot(ebong_data$presentase_status_gizi)
